@@ -1,0 +1,18 @@
+{
+  "name": "angular-cli-env",
+  "description": "Scalable environment variable for Angular CLI projects",
+  "version": "0.1.0",
+  "repository": "https://github.com/antonybudianto/angular-cli-env",
+  "engines": {
+    "node": ">= 4.1.0"
+  },
+  "author": "Antony Budianto <antonybudianto@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {},
+  "keywords": [
+    "ember-addon"
+  ],
+  "dependencies": {
+    "lodash": "^4.15.0"
+  }
+}
