@@ -1,4 +1,5 @@
 # angular-cli-env
+[![npm version](https://badge.fury.io/js/angular-cli-env.svg)](https://badge.fury.io/js/angular-cli-env)
 
 Angular CLI Env Addon
 
