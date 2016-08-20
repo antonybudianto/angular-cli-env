@@ -7,6 +7,8 @@ Inspired by [Twelve-Factor App](https://12factor.net/config)
 
 This addon can generate a constant file from `env.json` so that your environment variable is scalable. For now it only supports generating TypeScript constant exporting file.
 
+For more [details](https://github.com/antonybudianto/angular-cli-env/wiki/About)
+
 ## Prerequisites
 
 This addon has the following prerequisites:
