@@ -50,6 +50,39 @@ It'll generate the constant file at `src/app/shared/env.ts`, and this file can b
 
 You can also custom the path and name using `--path` and `--name` flags.
 
+### Access the env in code
+
+Just import the generated file in your app, for example:
+```ts
+import { Component } from '@angular/core';
+import { ENV } from './shared/env';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
+})
+export class AppComponent {
+  title = 'app works!';
+
+  constructor() {
+    console.log(ENV.TITLE);
+  }
+}
+
+```
+
+### Use interface for strong-typed environment variable (optional)
+
+You can create your env interface and then edit your `config/env.template.ts` and add your interface there
+```ts
+import { AppEnv } from './appenv.interface';
+
+export const ENV: AppEnv = {<% _.forEach(env, function(v, k) { %>
+    <%= k %>: <%= _.isString(v) ? "\'"+v+"\'" : v %>,<% }) %>
+};
+```
+
 ## Authors
 
 - [Antony Budianto](http://twitter.com/antonybudianto)
