@@ -1,0 +1,3 @@
+## 0.2.0
+- Now template is blackboxed for the sake of simplicity
+- Support static/dynamic-typed environment variable

@@ -1,7 +1,7 @@
 {
   "name": "angular-cli-env",
   "description": "Scalable environment variable for Angular CLI projects",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "repository": "https://github.com/antonybudianto/angular-cli-env",
   "engines": {
     "node": ">= 4.1.0"
