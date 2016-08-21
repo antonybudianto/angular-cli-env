@@ -35,8 +35,8 @@ ng env:init
 ```
 
 It'll generate 2 files:
-- env.json (Your environment variables live here, can be **git-ignored** as you like )
-- src/app/shared/app-env.interface.ts (Your environment variable interface for static type, must be checked to source control)
+- `env.json` (Your environment variables live here, can be **git-ignored** as you like )
+- `src/app/shared/app-env.interface.ts` (Your environment variable interface for static type, must be checked to source control)
 
 You only need to this **once**.
 
@@ -50,7 +50,8 @@ ng env
 
 It'll generate the constant file at `src/app/shared/env.ts`, and this file can be **git-ignored** as you like.
 
-By default, it will generate a constant file with static type `AppEnv`. If you prefer to not use type at all, you can add `--typeless` flag when generating.
+By default, it will generate a constant file with static type `AppEnv`.
+If you prefer to use dynamic type, you can add `--typeless` flag when generating.
 
 You can also custom the path and name using `--path` and `--name` flags.
 
