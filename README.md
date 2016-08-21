@@ -1,10 +1,13 @@
 # angular-cli-env
+[![npm version](https://badge.fury.io/js/angular-cli-env.svg)](https://badge.fury.io/js/angular-cli-env)
 
 Angular CLI Env Addon
 
 Inspired by [Twelve-Factor App](https://12factor.net/config)
 
 This addon can generate a constant file from `env.json` so that your environment variable is scalable. For now it only supports generating TypeScript constant exporting file.
+
+For more [details](https://github.com/antonybudianto/angular-cli-env/wiki/About)
 
 ## Prerequisites
 
@@ -47,13 +50,33 @@ ng env
 
 It'll generate the constant file at `src/app/shared/env.ts`, and this file can be **git-ignored** as you like.
 
-### Options
-
 By default, it will generate a constant file with static type `AppEnv`. If you prefer to not use type at all, you can add `--typeless` flag when generating.
 
 You can also custom the path and name using `--path` and `--name` flags.
 
 > When changing path, you need to adjust your app interface's path accordingly
+
+### Access the env in code
+
+Just import the generated file in your app, for example:
+```ts
+import { Component } from '@angular/core';
+import { ENV } from './shared/env';
+
+@Component({
+  selector: 'app-root',
+  templateUrl: 'app.component.html',
+  styleUrls: ['app.component.css']
+})
+export class AppComponent {
+  title = 'app works!';
+
+  constructor() {
+    console.log(ENV.TITLE);
+  }
+}
+
+```
 
 ## Authors
 
